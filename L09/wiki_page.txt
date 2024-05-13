@@ -1,0 +1,10 @@
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1211633275"><blockquote class="templatequote"><p><code>https://example.com/path/to/page?name=ferret&amp;color=purple</code></p></blockquote>
+<p>The exact structure of the query string is not standardized. Methods used to parse the query string may differ between websites.
+</p><p>A link in a web page may have a URL that contains a query string. <a href="/wiki/HTML" title="HTML">HTML</a> defines three ways a user agent can generate the query string:
+</p>
+<ul><li>an <a href="/wiki/Form_(HTML)" class="mw-redirect" title="Form (HTML)">HTML form</a> via the <code class="nowrap" style="">&lt;form&gt;...&lt;&#47;form&gt;</code> element</li>
+<li>a <a href="/wiki/Image_map#Server-side" title="Image map">server-side image map</a> via the <code class="mw-highlight mw-highlight-lang-text mw-content-ltr" id="" style="" dir="ltr">ismap</code> attribute on the <code class="nowrap" style="">&lt;img&gt;</code> element with an <code class="nowrap" style="">&lt;img&#32;ismap&gt;</code> construction</li>
+<li>an indexed search via the now deprecated <code class="nowrap" style="">&lt;isindex&gt;</code> element</li></ul>
+<h3><span class="mw-headline" id="Web_forms">Web forms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Query_string&amp;action=edit&amp;section=2" title="Edit section: Web forms"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>One of the original uses was to contain the content of an <a href="/wiki/Form_(HTML)" class="mw-redirect" title="Form (HTML)">HTML form</a>, also known as web form. In particular, when a form containing the fields <code>field1</code>, <code>field2</code>, <code>field3</code> is submitted, the content of the fields is encoded as a query string as follows:
+</p>
