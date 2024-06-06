@@ -89,9 +89,50 @@ class Age:
         raise AttributeError("Age couldn't be changed")
 
 
+# Using dictionary (bad example, because after remove object with descriptor, link to that object will remain in descriptor)
+# class UnifiedStringField:
+#     def __init__(self):
+#         self.value = {}
+#
+#     def __get__(self, obj, type=None) -> object:
+#         return self.value[obj]
+#
+#     def __set__(self, obj, value) -> None:
+#         self.value[obj] = value.capitalize()
+
+
+# class UnifiedStringField:
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def __get__(self, instance, owner):
+#         return instance.__dict__[self.name]  # could be some logic if there's no such attribute
+#
+#     def __set__(self, instance, value):
+#         #self.value = value.capitalize()
+#         instance.__dict__[self.name] = value.capitalize()
+
+
+# # for Python >= 3.6
+class UnifiedStringField:
+
+    def __set_name__(self, owner, name):
+        self.name = name
+
+    def __get__(self, instance, owner):
+        return instance.__dict__[self.name]  # could be some logic if there's no such attribute
+
+    def __set__(self, instance, value):
+        instance.__dict__[self.name] = value.capitalize()
+
+
 class User:
 
     age = Age()
+    #occupation = UnifiedStringField()
+    #occupation = UnifiedStringField('occupation')
+    occupation = UnifiedStringField()  # for second implementation
 
     def __init__(self, name, birth_year, occupation):
         self.name = name
