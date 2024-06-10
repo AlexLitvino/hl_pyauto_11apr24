@@ -1,0 +1,6 @@
+"""
+DRY
+KIS,S
+YAGNI
+SOLID
+"""
