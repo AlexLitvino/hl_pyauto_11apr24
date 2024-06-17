@@ -51,7 +51,7 @@ class Contact:
     @property
     def body_mass_index(self):
         if self.weight and self.height:
-            return self.weight / ((self.height/100) ** 2)
+            return round(self.weight / ((self.height/100) ** 2), 2)
         else:
             return None
 
