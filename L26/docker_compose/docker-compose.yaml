@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  server:
+    image: alexlitvino/server_calc
+    hostname: server
+    ports:
+      - '6000:5000'
+    volumes:
+      - "/home/olytvynov/Projects/HL/HL_courses/hl_pyauto_11apr24/L26/temp_server:/app/data"
+
+  client:
+    image: reqsend3
+    volumes:
+      - "/home/olytvynov/Projects/HL/HL_courses/hl_pyauto_11apr24/L26/temp_reqsend:/etc/"
+    depends_on:
+      - server

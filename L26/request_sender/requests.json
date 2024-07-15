@@ -1,0 +1,9 @@
+[
+  {"method": "GET", "url": "http://127.0.0.1:5000"},
+  {"method": "GET", "url": "http://127.0.0.1:5000/about"},
+  {"method": "GET", "url": "http://127.0.0.1:5000/api/v1/add?op1=1&op2=2"},
+  {"method": "GET", "url": "http://127.0.0.1:5000/api/v1/sub?op1=1&op2=2"},
+  {"method": "GET", "url": "http://127.0.0.1:5000/api/v1/mlp?op1=1&op2=2"},
+  {"method": "GET", "url": "http://127.0.0.1:5000/api/v1/div?op1=1&op2=2"},
+  {"method": "ERROR", "url": "http://127.0.0.1:5000/api/v1/add?op1=1&op2=2"}
+]

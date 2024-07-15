@@ -1,0 +1,53 @@
+Docker commands:
+docker login
+docker logout
+
+docker pull <IMAGE_NAME>    # Скачать образ на локальную машину
+
+docker image ls    # Посмотреть список скачанных образов
+docker images    # Посмотреть список скачанных образов
+
+docker ps    # Посмотреть список запущенных контейнеров
+docker ps -a  # Посмотреть список всех контейнеров
+
+docker run <IMAGE_NAME|IMAGE_ID>    # Запустить контейнер на основе образа
+docker run -it <IMAGE_NAME|IMAGE_ID>    # Запустить контейнер в интерактивном режиме
+
+docker rm <CONTAINER_ID>    # Удалить контейнер
+docker rm <CONTAINER_ID_1> <CONTAINER_ID_1>    # Удалить контейнеры
+docker container prune    # Удалить все контейнеры
+
+docker rmi <IMAGE_ID>     # Удалить образ
+docker rmi <IMAGE_ID_1> <IMAGE_ID_2>    # Удалить образы
+docker image prune    # Удалить все образы
+
+docker run -p <LOCAL_PORT>:<DOCKER_PORT> <IMAGE_NAME|IMAGE_ID>  # Запустить контейнер на основе образа, сделать маппинг локального и докер порта
+docker stop <CONTAINER_ID>  # Остановить контейнер
+docker exec -it <CONTAINER_ID> /bin/bash  # Зайти в нутрь контейнера. /bin/bash - путь к шеллу может быть другим. На некоторых контейнерах эта возможность может быть недоступна
+docker run --name <CONTAINER_NAME> <CONTAINER_ID>    #  Запустить контейнер и назначить ему имя
+docker run --rm <CONTAINER_ID>  # удалить контейнер посоле остановки
+docker run -e <ENV_VAR>=<ENV_VAR_VALUE> <IMAGE_NAME|IMAGE_ID>    # Передать внутрь контейнера переменную окруженния
+docker run -e <ENV_VAR_1>=<ENV_VAR_VALUE_1> -e <ENV_VAR_2>=<ENV_VAR_VALUE_2> <IMAGE_NAME|IMAGE_ID>    # Передать внутрь контейнера несколько переменных окруженния
+docker run -e --env-file <PATH_TO_ENV_FILE> <IMAGE_NAME|IMAGE_ID>    #  Передать переменные окружения в файле
+
+docker build <DIRECTORY>    # Создать образ на основе докерфайла
+docker build -t <IMAGE_NAME> <DIRECTORY>     # Назначить образу имя
+docker build -t <IMAGE_NAME>:<TAG> <DIRECTORY>     # Назначить образу тег
+
+docker push <USERNAME/IMAGE_NAME:TAG>   # Загрузить образ в докер хаб
+docker tag <CURRENT_NAME> <NEW_NAME>    # Создать копию образа с новым имененм
+
+docker image inspect <IMAGE_NAME>    # Посмотреть структуру образа (из каких образов он построен)
+
+docker volume ls  посмотреть список Volumes
+docker volume inspect <VOLUME_NAME>
+docker volume create <VOLUME_NAME>
+docker volume rm <VOLUME_NAME>
+docker volume prune
+
+docker logs --tail 100 -f <container_id>    # Show last 100 lines of logs
+
+# Docker-compose
+docker-compose --file <PATH_TO_DOCKER_COMPOSE_FILE> up --detach    # start from file in detached mode
+docker-compose kill    # stop containers
+docker-compose down stop and remove containers
