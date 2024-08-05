@@ -1,0 +1,4 @@
+test_id,param1,param2,param3,expected_result
+tst-1,1,3,5,34
+tst-2,4,6,3,6
+tst-3,4,7,2,6

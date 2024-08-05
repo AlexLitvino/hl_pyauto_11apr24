@@ -1,0 +1,6 @@
+- age: 34
+  name: John
+  salary: 3000
+- age: 54
+  name: Anna
+  salary: [5000, 6000]

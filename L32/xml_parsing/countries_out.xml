@@ -1,0 +1,15 @@
+<data>
+    <country name="New Zeland" attr="value">
+        <rank>1</rank>
+        <year>99999999</year>
+        <gdppc>141100</gdppc>
+        <neighbor name="Austria" direction="E" />
+        <neighbor name="Switzerland" direction="W" />
+    <population attr2="value2">777777777777777</population></country>
+    <country name="Singapore">
+        <rank>4</rank>
+        <year>2011</year>
+        <gdppc>59900</gdppc>
+        <neighbor name="Malaysia" direction="N" />
+    </country>
+    </data>
